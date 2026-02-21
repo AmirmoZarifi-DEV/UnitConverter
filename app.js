@@ -6,7 +6,6 @@ const inchBtn = document.querySelector("#Inchbtn");
 const subBtn = document.querySelector(".submit");
 const result = document.querySelector(".result");
 const btnAll = document.querySelectorAll(".btn");
-const inputText = 10;
 
 const removeActive = function () {
   for (let i = 0; i < btnAll.length; i++) {
@@ -31,50 +30,65 @@ kmBtn.addEventListener("click", function () {
 });
 subBtn.addEventListener("click", function () {
   const inputText = Number(document.querySelector("input").value);
-  let cmResult = [];
-  const conCM = {
-    cm_To_M: inputText / 100,
-    cm_To_Km: inputText / 100000,
-    cm_To_Inch: inputText * 0.39,
-  };
-  const conKM = {
-    KM_To_M: inputText * 1000,
-    KM_To_CM: inputText * 100000,
-    KM_To_Inch: inputText * (39370).toFixed(2),
-  };
-  const conM = {
-    M_To_CM: inputText / 1000,
-    M_To_Km: inputText * 100,
-    M_To_Inch: inputText * (39.37).toFixed(2),
-  };
-  const conInch = {
-    Inch_To_M: inputText * 0.0254,
-    Inch_To_Km: inputText * 2.54,
-    Inch_To_CM: inputText * 0.0000254,
-  };
-
-  if (cmBtn.classList.contains("active")) {
-    for (const i of Object.entries(conCM)) {
-      cmResult.push(...i);
-      console.log(...i);
-    }
-    result.textContent = `${cmResult}`;
-  } else if (kmBtn.classList.contains("active")) {
-    for (const i of Object.entries(conKM)) {
-      // cmResult.push(...i);
-      console.log(...i);
-    }
-  } else if (mBtn.classList.contains("active")) {
-    for (const i of Object.entries(conM)) {
-      // cmResult.push(...i);
-      console.log(...i);
-    }
-  } else if (inchBtn.classList.contains("active")) {
-    for (const i of Object.entries(conInch)) {
-      // cmResult.push(...i);
-      console.log(...i);
+  let activeid;
+  for (const btn of btnAll) {
+    if (btn.classList.contains("active")) {
+      activeid = btn.id;
+      break;
     }
   }
+  const rates = {
+    CMbtn: { M: 0.01, KM: 0.00001, Inch: 0.39 },
+    Mbtn: { CM: 100, KM: 0.001, Inch: 39.37 },
+    KMbtn: { M: 0.001, CM: 100000, Inch: 39370 },
+    Inchbtn: { M: 0.0254, KM: 2.54, Inch: 0.0000254 },
+  };
+  for (const [key, value] of Object.entries(rates[activeid])) {
+    console.log(`${key}:${inputText * value} `);
+  }
+  // const conCM = {
+  //   cm_To_M: inputText / 100,
+  //   cm_To_Km: inputText / 100000,
+  //   cm_To_Inch: inputText * 0.39,
+  // };
+  // const conKM = {
+  //   KM_To_M: inputText * 1000,
+  //   KM_To_CM: inputText * 100000,
+  //   KM_To_Inch: inputText * (39370).toFixed(2),
+  // };
+  // const conM = {
+  //   M_To_CM: inputText / 1000,
+  //   M_To_Km: inputText * 100,
+  //   M_To_Inch: inputText * (39.37).toFixed(2),
+  // };
+  // const conInch = {
+  //   Inch_To_M: inputText * 0.0254,
+  //   Inch_To_Km: inputText * 2.54,
+  //   Inch_To_CM: inputText * 0.0000254,
+  // };
+
+  // if (cmBtn.classList.contains("active")) {
+  //   for (const [key, value] of Object.entries(rates.activeid)) {
+  //     // cmResult.push(...i);
+  //     console.log(key, value);
+  //   }
+  //   // result.textContent = `${cmResult}`;
+  // } else if (kmBtn.classList.contains("active")) {
+  //   for (const i of Object.entries(conKM)) {
+  //     // cmResult.push(...i);
+  //     console.log(...i);
+  //   }
+  // } else if (mBtn.classList.contains("active")) {
+  //   for (const i of Object.entries(conM)) {
+  //     // cmResult.push(...i);
+  //     console.log(...i);
+  //   }
+  // } else if (inchBtn.classList.contains("active")) {
+  //   for (const i of Object.entries(conInch)) {
+  //     // cmResult.push(...i);
+  //     console.log(...i);
+  //   }
+  // }
 });
 
 // cmBtn.addEventListener("click", function () {
