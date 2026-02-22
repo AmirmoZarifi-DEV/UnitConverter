@@ -27,7 +27,7 @@ body{
 .title{
     text-align:center;
     margin-bottom:25px;
-    font-size:22px;
+    font-size:28px;
     letter-spacing:1px;
 }
 
@@ -102,4 +102,14 @@ button:hover{
 }
 .active {
   background-color: #303030;
+}
+
+.owner{
+    position: fixed;
+    left: 0.5rem;
+    bottom: 0.5rem;
+}
+h2{
+font-size: 0.8rem;
+color: #fff;
 }
