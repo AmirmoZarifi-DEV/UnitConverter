@@ -1,35 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Unit Converter</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="converter">
+      <h1 class="title">مبدل</h1>
 
-<div class="converter">
+      <div class="input-group">
+        <label>مقدار</label>
+        <input type="number" id="inputValue" placeholder="عدد وارد کن" />
+      </div>
 
-    <h1 class="title">مبدل</h1>
+      <div class="input-group">
+        <label>نتیجه</label>
+        <textarea name="" id="" readonly></textarea>
+        <!-- <input value="0" type="text" class="result" id="resultValue" readonly /> -->
+      </div>
 
-    <div class="input-group">
-        <label>مقدار (CM)</label>
-        <input type="number" id="inputValue" placeholder="عدد وارد کن">
+      <div class="buttons">
+        <button class="btn active" id="CMbtn">CM</button>
+        <button class="btn" id="Mbtn">M</button>
+        <button class="btn" id="KMbtn">KM</button>
+        <button class="btn" id="Inchbtn">Inch</button>
+      </div>
+      <button class="submit" type="submit">تبدیل کن</button>
     </div>
-
-    <div class="input-group">
-        <label>نتیجه (M)</label>
-        <input type="text" id="resultValue" readonly>
+    <div class="owner">
+      <h2>Designed & Developed By <i>Kayan And Amir</i></h2>
     </div>
-
-    <div class="buttons">
-        <button>CM → M</button>
-        <button>M → Inch</button>
-        <button>KM → CM</button>
-        <button>CM → Inch</button>
-    </div>
-    <button class="submit" type="submit">تبدیل کن</button>
-</div>
-<div class="owner"><h2>Designed & Developed By <i>Kayan</i></h2></div>
-<script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>

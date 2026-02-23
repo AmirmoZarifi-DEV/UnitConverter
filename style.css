@@ -1,85 +1,90 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-.converter{
-    width:380px;
-    padding:35px;
-    border-radius:20px;
-    backdrop-filter: blur(20px);
-    background: rgba(255,255,255,0.1);
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 25px 45px rgba(0,0,0,0.2);
-    color:#fff;
+.converter {
+  width: 380px;
+  padding: 35px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
-.title{
-    text-align:center;
-    margin-bottom:25px;
-    font-size:28px;
-    letter-spacing:1px;
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 
-.input-group{
-    margin-bottom:20px;
+.input-group {
+  margin-bottom: 20px;
 }
 
-.input-group label{
-    display:block;
-    margin-bottom:8px;
-    font-size:14px;
-    opacity:0.8;
-    text-align: right;
-    direction: rtl;
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: right;
+  direction: rtl;
 }
 
-.input-group input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    outline:none;
-    background:rgba(255,255,255,0.2);
-    color:#fff;
-    font-size:15px;
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
 }
 
-.input-group input::placeholder{
-    color:rgba(255,255,255,0.6);
-    text-align: right;
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
 }
 
-.buttons{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    margin-top:10px;
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-button{
-    padding:13px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:13px;
-    font-weight:500;
-    transition:0.3s;
-    background:#fff;
-    color:#333;
+button {
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s;
+  background: #fff;
+  color: #333;
 }
 
-.submit{
+.submit {
   width: 100%;
   height: 2rem;
   margin-top: 1rem;
@@ -91,25 +96,40 @@ button{
   padding: 1.2rem 0;
 }
 
-input[type=number]{
+input[type="number"] {
   direction: rtl;
 }
 
-button:hover{
-    transform:scale(1.05);
-    background:#000;
-    color:#fff;
+button:hover {
+  transform: scale(1.05);
+  background: #000;
+  color: #fff;
 }
 .active {
-  background-color: #303030;
+  background: #000;
+  color: #fff;
 }
 
-.owner{
-    position: fixed;
-    left: 0.5rem;
-    bottom: 0.5rem;
+.owner {
+  position: fixed;
+  left: 0.5rem;
+  bottom: 0.5rem;
 }
-h2{
-font-size: 0.8rem;
-color: #fff;
+h2 {
+  font-size: 0.8rem;
+  color: #fff;
+}
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+  height: 84px;
+  overflow: hidden;
+  text-align: center;
+  resize: none;
 }
